@@ -21,7 +21,7 @@
  * CSV of image IDs.
  */
 
-add_shortcode('random_image_url', [$this, 'random_image_url']);
+add_shortcode('random_image_url', 'random_image_url');
 
 function random_image_url($code)
 {
