@@ -21,7 +21,15 @@
  * CSV of image IDs.
  */
 
-add_shortcode('random_image_url', 'random_image_url');
+add_shortcode('random_image_url', 'random_image_url_shortcode_code');
+
+    
+function random_image_url_shortcode_code($atts, $content, $shortcode_tag)
+{
+    $code = '{{random_image_url:'.$atts['ids'].'}}';
+    $url = random_image_url($code);
+    return $url;
+}
 
 function random_image_url($code)
 {
